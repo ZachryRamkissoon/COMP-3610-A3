@@ -16,6 +16,8 @@ The repository is organized by task, with each part containing the relevant scri
   - `merging.ipynb`: Initial notebook for merging review and metadata on `parent_asin` (exploratory, may contain redundant code).
   - `preprocessing.ipynb`: Main notebook for cleaning and preprocessing, including merging, handling missing values, removing duplicates, and adding derived columns (`review_length`, `year`).
   - **Purpose**: Processes raw data into cleaned Parquet files, which are used in subsequent tasks.
+  - `sentiment.ipynb`: Notebook for adding sentiment column.
+  - **Purpose**: Preparing for logistic regression.
 
 - **Part_3/**: Exploratory Data Analysis (EDA) (Task 3)
   - `EDA.ipynb`: Notebook for generating EDA plots (star rating histogram, top 10 categories, top 10 brands, time-based trend) and calculating the Pearson correlation between `review_length` and `rating`.
@@ -27,8 +29,6 @@ The repository is organized by task, with each part containing the relevant scri
   - **Purpose**: Provides insights into the dataset’s distribution, trends, and correlations.
 
 - **Part_4_&6/**: Binary Sentiment (Task 4) and Clustering (Task 6)
-  - `adding_sentiment.ipynb`: Notebook for adding sentiment column.
-  - **Purpose**: Preparing for logistic regression.
   - `logistic_regression_&_clustering.ipynb`: Notebook for binary sentiment classification using logistic regression and product segmentation using k-means clustering.
   - **Purpose**: Implements sentiment prediction (Positive/Negative based on ratings) and clusters products into 5 groups based on features like mean rating ,total reviews, brand and category.
 
@@ -39,9 +39,9 @@ The repository is organized by task, with each part containing the relevant scri
 ### Running the Notebooks
 - **Order of Execution**:
   1. **Part_1**: Run `download_amazon_reviews.py` to acquire the dataset.
-  2. **Part_2**: Run `merging.ipynb` to merge the data. Run `preprocessing.ipynb` to clean and preprocess the data.
+  2. **Part_2**: Run `merging.ipynb` to merge the data. Run `preprocessing.ipynb` to clean and preprocess the data. Run `sentiment.ipynb` to add the sentiment column.
   3. **Part_3**: Run `EDA.ipynb` to perform EDA and generate plots.
-  4. **Part_4_&6**: Run `adding_sentiment.ipynb` to add the sentiment column. Run `logistic_regression_&_cluster_with_summary.ipynb` for sentiment classification and clustering.
+  4. **Part_4_&6**: Run `logistic_regression_&_cluster_with_summary.ipynb` for sentiment classification and clustering.
   5. **Part_5**: Run `ALS.ipynb` to build the ALS recommender system.
 
 ## Notes

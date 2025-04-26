@@ -18,7 +18,7 @@ The repository is organized by task, with each part containing the relevant scri
   - **Purpose**: Processes raw data into cleaned Parquet files, which are used in subsequent tasks.
 
 - **Part_3/**: Exploratory Data Analysis (EDA) (Task 3)
-  - `visualisation-fixed.ipynb`: Notebook for generating EDA plots (star rating histogram, top 10 categories, top 10 brands, time-based trend) and calculating the Pearson correlation between `review_length` and `rating`.
+  - `EDA.ipynb`: Notebook for generating EDA plots (star rating histogram, top 10 categories, top 10 brands, time-based trend) and calculating the Pearson correlation between `review_length` and `rating`.
   - `plots/`: Directory containing the generated plots:
     - `star_rating_histogram.png`
     - `top_10_categories.png`
@@ -27,16 +27,14 @@ The repository is organized by task, with each part containing the relevant scri
   - **Purpose**: Provides insights into the dataset’s distribution, trends, and correlations.
 
 - **Part_4_&6/**: Binary Sentiment (Task 4) and Clustering (Task 6)
-  - `logistic_regression_&_cluster_with_summary.ipynb`: Notebook for binary sentiment classification using logistic regression and product segmentation using k-means clustering.
+  - `adding_sentiment.ipynb`: Notebook for adding sentiment column.
+  - **Purpose**: Preparing for logistic regression.
+  - `logistic_regression_&_clustering.ipynb`: Notebook for binary sentiment classification using logistic regression and product segmentation using k-means clustering.
   - **Purpose**: Implements sentiment prediction (Positive/Negative based on ratings) and clusters products into 5 groups based on features like mean rating ,total reviews, brand and category.
 
 - **Part_5/**: Recommender System (ALS) (Task 5)
-  - `als_sample-1.ipynb`: Notebook for building an ALS-based recommender system on a 0.01% sample of the data, including data setup, model training, evaluation (RMSE), and top-5 recommendations for 3 users.
+  - `ALS.ipynb`: Notebook for building an ALS-based recommender system on a 0.01% sample of the data, including data setup, model training, evaluation (RMSE), and top-5 recommendations for 3 users.
   - **Purpose**: Demonstrates collaborative filtering using the `implicit` library.
-
-### Prerequisites
-- **Hardware**: At least 16GB RAM and sufficient disk space to handle the 200GB dataset.
-- **Software**: Python, Jupyter Notebook and a Conda environment for dependency management.
 
 ### Running the Notebooks
 - **Order of Execution**:

@@ -1,4 +1,4 @@
-# COMP-3610-A3-1: Big Data Analytics Assignment 3
+# COMP-3610-A3: Big Data Analytics Assignment 3
 
 ## Overview
 
